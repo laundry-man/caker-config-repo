@@ -3,6 +3,7 @@ server:
   message: connected
 
 spring:
+  profiles: local
   datasource:
     url: jdbc:mysql://localhost:3306/caker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
