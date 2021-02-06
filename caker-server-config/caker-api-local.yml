@@ -1,13 +1,11 @@
 server:
   port: 8090
-  message: connected
-
 spring:
   profiles: local
   datasource:
     url: jdbc:mysql://localhost:3306/caker?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: root
+    password: '{cipher}AQB++sQkvsl7O8ERml5jEWVZZVsClMykWGebEPKv8U0rOMVFZ+QJIZxYvH5CDm+5XI9dvtbJICmNEVTS4ej0TmBm0Jc1jSbS2q/FLkh6tUrnCHew75wonSDqOH07vKTYhZyHICRDivlYl7gRtzzrA0fmO6M0SB12P8Z53NFgQ+CEXg9NCvbqxiMlYH6HFNLNEkb40cOJgD42G5KhWJvl3D/LhUmudsFICTM0glKsRHfzfxEGb9kwCAHc7dUtJaAl7hp0rN1QZz76bYdxX2kOovGpNdzkme2jfzhJueOnIqII/usvx8xgRkZ/XyV3Q/xlH1ZM75IeRDNsZa9if0jS8vFdQsDBNqmQZGce+iz+jS6InRgEMg/WyR9MlBlc759zBYk='
     driver-class-name: com.mysql.cj.jdbc.Driver
     validation-query: SELECT 1
     validation-query-timeout: 1000
@@ -24,7 +22,7 @@ spring:
     basename: i18n/exception
     encoding: UTF-8
   jwt:
-    secret: raingurl
+    secret: '{cipher}AQBIwpbFQoTDaR2+y/iiJq4I3frCpsj1PjH+WYHahbhblljZj/ZvFp9WsNC7LjKxo9NCB7cPAWh8Zc2i8FSFM1KfX7ncmeQxJNABtmlIPJ2Fw8PILT0SZuhnYg4IGBlryIXwvkjnqLNTUYqJ/Y8dThOsWAuLuEQE0EpzZaJgVgC5/LkJDC2eAeuTvAhFKY+tKGB03ZVUIetxDtAs3M0FH+65JGZz8s59O/ppv2KznQFyB+W7Wd6nu2IBjtAdOtzDvodOrsCbeJWZ0AdKEOWqtYTEtrkh3phWwQgOtE+hxwqmD7549VrQjVatmv2gXbW0/muz/SuqpGhCbyaYJvLV/CIDS261nXEOzmlmOLLeRWBiBuZEudYLK6y7pnXh9K8zzYA='
   social:
     kakao:
       client_id: 57e8ef720b40983fe335f85ba973e430
