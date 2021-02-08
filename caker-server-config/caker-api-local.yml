@@ -1,5 +1,6 @@
+
 server:
-  port: 8090
+  message: she don't wanna tell lies
 spring:
   profiles: local
   datasource:
@@ -35,3 +36,9 @@ spring:
     base: http://localhost:8090
   path:
     image-path: /image/
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true

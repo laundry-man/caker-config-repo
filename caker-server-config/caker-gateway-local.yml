@@ -1,0 +1,14 @@
+spring:
+  profiles: local
+zuul:
+  routes:
+    api:
+      stripPrefix: false
+      path: /api/**
+      url: caker-api
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
