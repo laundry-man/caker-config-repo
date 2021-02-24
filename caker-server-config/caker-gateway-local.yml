@@ -5,7 +5,7 @@ zuul:
     api:
       stripPrefix: false
       path: /api/**
-      url: caker-api
+      url: caker-api-service
 eureka:
   client:
     service-url:
