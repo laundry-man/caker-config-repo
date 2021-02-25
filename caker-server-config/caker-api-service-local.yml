@@ -50,3 +50,9 @@ management:
     web:
       exposure:
         include: shutdown, info
+elastic:
+  url: http://localhost:9200
+  indices:
+    tag: caker-tag
+  api:
+    search: _search
