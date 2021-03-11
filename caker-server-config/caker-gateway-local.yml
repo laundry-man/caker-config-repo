@@ -3,9 +3,10 @@ spring:
 zuul:
   routes:
     api:
-      stripPrefix: false
+      strip-prefix: false
       path: /api/**
       url: caker-api-service
+      sensitive-headers: Cookie,Set-Cookie
 eureka:
   client:
     service-url:
