@@ -45,8 +45,6 @@ spring:
           auth: true
           starttls:
             enable: true
-  path:
-    image-path: /image/
 eureka:
   client:
     service-url:

@@ -7,6 +7,11 @@ zuul:
       path: /api/**
       url: caker-api-service
       sensitive-headers: Cookie,Set-Cookie
+    auth:
+      strip-prefix: false
+      path: /auth/**
+      url: caker-auth-service
+      sensitive-headers: Cookie,Set-Cookie
 eureka:
   client:
     service-url:
