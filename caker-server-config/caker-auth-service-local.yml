@@ -33,7 +33,7 @@ spring:
         token: https://kauth.kakao.com/oauth/token
         profile: https://kapi.kakao.com/v2/user/me
   url:
-    base: http://localhost:9100
+    base: https://localhost:8443
   mail:
     host: smtp.gmail.com
     port: 587
