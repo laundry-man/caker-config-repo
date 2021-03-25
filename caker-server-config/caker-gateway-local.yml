@@ -6,6 +6,11 @@ server:
     key-alias: localhost
 spring:
   profiles: local
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
 zuul:
   routes:
     api:
@@ -18,17 +23,3 @@ zuul:
       path: /auth/**
       url: caker-auth-service
       sensitive-headers: Cookie,Set-Cookie
-eureka:
-  client:
-    service-url:
-      default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    prefer-ip-address: true
-management:
-  endpoint:
-    shutdown:
-      enabled: true
-  endpoints:
-    web:
-      exposure:
-        include: shutdown, info
