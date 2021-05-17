@@ -1,2 +1,2 @@
-# caker-config-repo
-spring cloud config repository
+# caker-config-repository
+caker config repository
