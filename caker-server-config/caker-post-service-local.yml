@@ -1,0 +1,25 @@
+spring:
+  profiles: local
+  zipkin:
+    base-url: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
+      
+resilience4j:
+  circuitbreaker:
+    instances:
+      test:
+        register-health-indicator: true
+        ring-buffer-size-in-closed-state: 3
+        failure-rate-threshold: 100
+        wait-duration-in-open-state: 10000
+        ring-buffer-size-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
+  retry:
+    instances:
+      test:
+        max-attempts: 3
+        wait-duration: 100
+        retry-exceptions:
+          - org.springframework.web.client.HttpServerErrorException

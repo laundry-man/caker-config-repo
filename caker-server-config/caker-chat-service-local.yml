@@ -1,0 +1,35 @@
+spring:
+  profiles: local
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  messages:
+    basename: i18n/message
+    encoding: UTF-8
+
+jwt-decrypt-key: |
+  MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAusTmC9sf36TuZ1DG6lMW
+  CCB8Xn7ELu1Cuz4kM8KCFiXRR0s0Oh2iZ1D2bsm9tj4M7HSqyrNC4MLHjso1XGib
+  ClHd+O2BrG0rbfTHJrpuLzwSFHOMn5oTFi+vJaueV3MIK3IfF4zZepbwwzJXFTvP
+  xvc0SSDT3b0KsC9+FyuFuSn2L9dWE5lJm2uZpML4iK4Tuptq3+7iMOSWhKWQDRxk
+  jI/kLi/McyFuuaz9oiwoGx2bwXH7Kq0Znv5roExipHBNU0sZmpGl/hK8sL2ZQs3z
+  pWf9l9jNMNGgrH0WMzxQncXTGTr68mrI/57rzN0u4h8r/U33TdcZ2EiuTszHAc2k
+  yQIDAQAB
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      test:
+        register-health-indicator: true
+        ring-buffer-size-in-closed-state: 3
+        failure-rate-threshold: 100
+        wait-duration-in-open-state: 10000
+        ring-buffer-size-in-half-open-state: 3
+        automatic-transition-from-open-to-half-open-enabled: true
+  retry:
+    instances:
+      test:
+        max-attempts: 3
+        wait-duration: 100
+        retry-exceptions:
+          - org.springframework.web.client.HttpServerErrorException

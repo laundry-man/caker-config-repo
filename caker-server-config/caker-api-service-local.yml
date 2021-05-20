@@ -24,8 +24,6 @@ spring:
   messages:
     basename: i18n/message
     encoding: UTF-8
-  jwt:
-    secret: '{cipher}AQBIwpbFQoTDaR2+y/iiJq4I3frCpsj1PjH+WYHahbhblljZj/ZvFp9WsNC7LjKxo9NCB7cPAWh8Zc2i8FSFM1KfX7ncmeQxJNABtmlIPJ2Fw8PILT0SZuhnYg4IGBlryIXwvkjnqLNTUYqJ/Y8dThOsWAuLuEQE0EpzZaJgVgC5/LkJDC2eAeuTvAhFKY+tKGB03ZVUIetxDtAs3M0FH+65JGZz8s59O/ppv2KznQFyB+W7Wd6nu2IBjtAdOtzDvodOrsCbeJWZ0AdKEOWqtYTEtrkh3phWwQgOtE+hxwqmD7549VrQjVatmv2gXbW0/muz/SuqpGhCbyaYJvLV/CIDS261nXEOzmlmOLLeRWBiBuZEudYLK6y7pnXh9K8zzYA='
   social:
     kakao:
       client_id: 98c1b87a283bea5899e4d9f5cd606133
